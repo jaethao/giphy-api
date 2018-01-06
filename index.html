@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<html>
+<head>
+  <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link href="reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+  <title>
+    GIPHY Freeze
+  </title>
+</head>
+
+<body>
+  <div class="jumbotron">
+
+<div class="row">
+  <div class="col-md-3">
+    <h1>GIPHY Freeze</h1>
+    <br>
+    <br>
+    <!-- this is the form -->
+    <form>
+  <div class="form-group">
+    <label for="text">Search</label>
+    <input type="text" class="form-control" id="search" placeholder="Search something...">
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+<br>
+<!-- this will hold the buttons -->
+    <div id="button-holder">
+      <button type="button" class="btn btn-info">elephant</button>
+    </div>
+</div>
+
+
+<div class="col-md-9">
+  <h4>Findings</h4>
+  <hr>
+
+<!-- this will hold the gifs images -->
+    <div id="gifs">
+
+    </div>
+</div>
+</div>
+
+</div>
+<!-- Javascript -->
+  <script src="logic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
