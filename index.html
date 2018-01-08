@@ -7,9 +7,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
    <!-- Bootstrap CSS -->
-   <link href="reset.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+   <link href="assets/style/reset.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+-->
+<link rel="stylesheet" href="assets/style/bootstrap.min.css">
+<link rel="stylesheet" href="assets/style/style.css">
 <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
   <title>
     GIPHY Freeze
@@ -22,16 +24,21 @@
 <div class="row">
   <div class="col-md-3">
     <h1>GIPHY Freeze</h1>
-
+<br>
+<br>
     <!-- this is the form -->
     <form>
   <div class="form-group">
     <label for="text">Search</label>
-    <input type="text" class="form-control" id="search" placeholder="Search something...">
+    <input type="text" class="form-control" id="search" placeholder="Search an animal...">
   </div>
-  <button type="submit" class="btn btn-danger">Submit</button>
+  <button type="submit" class="btn btn-danger" id="sumbit">Submit</button>
 </form>
 <br>
+<br>
+
+<p>Animals searched</p>
+<hr>
 <!-- this will hold the buttons -->
     <div id="button-holder">
       <button type="button" class="btn btn-info">elephant</button>
@@ -41,10 +48,11 @@
 
 <div class="col-md-9">
   <h4>Findings</h4>
+  <p>Click on the gif to pause and unpause</p>
   <hr>
 
 <!-- this will hold the gifs images -->
-    <div id="gifs">
+    <div class="text-center" id="gifs">
 
     </div>
 </div>
@@ -57,8 +65,8 @@
 
 </div>
 <!-- Javascript -->
-  <script src="logic.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/logic/logic.js"></script>
 
 </body>
 </html>
