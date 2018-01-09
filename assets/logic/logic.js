@@ -22,7 +22,7 @@ $(document).on('click','.searchButton',function(){
   $.ajax({url:queryURL,method:"GET"})
   .done(function(response){
     console.log(response);
-    for(var i = 0;i<response.data.length;i++){
+    for(var i =0;i<response.data.length;i++){
       var searchDiv = $('<div class="search-item">');
       var rating = response.data[i].rating;
       var p = $('<p>').text('Rating: '+rating);
@@ -39,4 +39,27 @@ $(document).on('click','.searchButton',function(){
       $('#gifs').append(searchDiv);
     }
   })
+})
+
+$(document).on('click','.searchImage', function(){
+  var state = $(this).attr('data-state');
+  if(state == 'still'){
+    $(this).attr('src',$(this).data('animated'));
+    $(this).attr('data-state','animated');
+  } else {
+    $(this).attr('src',$(this).data('still'));
+    $(this).attr('data-state','still');
+  }
+})
+
+$('#addSearch').on('click', function(){
+  var newSearch = $('input').eq(0).val();
+  searchArray.push(newSearch);
+  populateButtons(searchArray,'searchButton','#button-holder');
+  return false;
+})
+
+$(document).on('click','#clear', function(){
+  $('#gifs').empty();
+  $('#button-holder').empty();
 })
