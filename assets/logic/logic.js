@@ -1,16 +1,16 @@
 $(function(){
-  populateButtons(searchArray,'searchButton','#button-holder');
+  populateButtons(topics,'searchButton','#button-holder');
 });
 
-var searchArray = ['elephant', 'parrot', 'bear', 'tiger'];
+var topics = ['elephant', 'parrot', 'bear', 'tiger'];
 
-function populateButtons(searchArray, classToAdd, areaToAdd){
+function populateButtons(topics, classToAdd, areaToAdd){
   $(areaToAdd).empty();
-  for(var i = 0;i<searchArray.length;i++){
+  for(var i = 0;i<topics.length;i++){
     var a = $('<button type="button" class="btn btn-info">');
     a.addClass(classToAdd);
-    a.attr('data-type', searchArray[i]);
-    a.text(searchArray[i]);
+    a.attr('data-type', topics[i]);
+    a.text(topics[i]);
     $(areaToAdd).append(a);
   }
 }
@@ -54,9 +54,10 @@ $(document).on('click','.searchImage', function(){
 
 $('#addSearch').on('click', function(){
   var newSearch = $('input').eq(0).val();
-  searchArray.push(newSearch);
-  populateButtons(searchArray,'searchButton','#button-holder');
+  topics.push(newSearch);
+  populateButtons(topics,'searchButton','#button-holder');
   return false;
+  $('#search-input').empty();
 })
 
 $(document).on('click','#clear', function(){
