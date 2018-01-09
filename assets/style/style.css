@@ -1,26 +1,24 @@
 @charset "UTF-8";
-
-h1,h2,h3,h4,h5{
-  font-family: 'Bevan', cursive;
+h1, h2, h3, h4, h5 {
+    font-family: 'Bevan', cursive;
 }
 
-#container{
-  height: 900px;
+#container {
+    height: 900px;
 }
 
-#gifs{
-height: 600px;
+#gifs {
+    height: 100%;
 }
 
-
-#search{
-  width: 200px;
+#search {
+    width: 200px;
 }
 
-hr{
-  background-color: white;
+hr {
+    background-color: white;
 }
 
-footer{
-  padding-top: 50px;
+footer {
+    padding-top: 50px;
 }
