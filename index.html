@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <html>
-
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         <link href="assets/style/reset.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
--->
         <link rel="stylesheet" href="assets/style/bootstrap.min.css">
         <link rel="stylesheet" href="assets/style/style.css">
+        <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <title>
             GIPHY Freeze
         </title>
@@ -25,26 +22,24 @@
 
             <div class="row">
                 <div class="col-md-3" id="leftCol">
-                    <h1>GIPHY Freeze</h1>
+                    <h2>GIPHY Artist Freeze</h2>
                     <br>
                     <br>
                     <!-- this is the form -->
                     <form>
                         <div class="form-group" id="search-forms">
                             <label for="text">Search</label>
-                            <input type="text" class="form-control" id="search-input" placeholder="Search an animal...">
+                            <input type="text" class="form-control" id="search-input" placeholder="Search an artist...">
                             <input id="addSearch" class="btn btn-danger" type="submit" value="Submit">
                         </div>
-                        <!--<button type="submit" class="btn btn-danger" id="sumbit">Submit</button> -->
                     </form>
                     <br>
                     <br>
 
-                    <p>Animals searched</p>
+                    <p>Artists searched</p>
                     <hr>
                     <!-- this will hold the buttons -->
                     <div id="button-holder">
-                        <!-- <button type="button" class="btn btn-info">elephant</button> -->
                     </div>
                     <br>
                     <br>
@@ -62,7 +57,7 @@
                     <hr>
 
                     <!-- this will hold the gifs images -->
-                    <div class="text-center" id="gifs">
+                    <div class="row" id="gifs">
 
                     </div>
                 </div>
@@ -74,9 +69,9 @@
             </footer>
 
         </div>
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Javascript -->
         <script src="assets/logic/logic.js"></script>
-
     </body>
-
     </html>

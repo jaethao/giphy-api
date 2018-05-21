@@ -2,7 +2,7 @@ $(function(){
   populateButtons(topics,'searchButton','#button-holder');
 });
 
-var topics = ['elephant', 'parrot', 'bear', 'tiger'];
+var topics = ['Van Gogh', 'Frida Kohl', 'Dali', 'Monet'];
 
 function populateButtons(topics, classToAdd, areaToAdd){
   $(areaToAdd).empty();
@@ -18,12 +18,12 @@ function populateButtons(topics, classToAdd, areaToAdd){
 $(document).on('click','.searchButton',function(){
   var type = $(this).data('type');
   var queryURL = 'http:///api.giphy.com/v1/gifs/search?q='+type+
-  '&api_key=X5KyOyApsC3FaBlvx3X5F8wpQxp06YGz&limit=10';
+  '&api_key=X5KyOyApsC3FaBlvx3X5F8wpQxp06YGz&limit=25';
   $.ajax({url:queryURL,method:"GET"})
   .done(function(response){
     console.log(response);
     for(var i =0;i<response.data.length;i++){
-      var searchDiv = $('<div class="search-item">');
+      var searchDiv = $('<div class="search-item col-lg-6">');
       var rating = response.data[i].rating;
       var p = $('<p>').text('Rating: '+rating);
       var animated = response.data[i].images.fixed_height.url;
@@ -34,8 +34,8 @@ $(document).on('click','.searchButton',function(){
       image.attr('data-animated',animated);
       image.attr('data-state','still');
       image.addClass('searchImage');
-      searchDiv.append(p);
       searchDiv.append(image);
+      searchDiv.append(p);
       $('#gifs').append(searchDiv);
     }
   })
@@ -62,5 +62,4 @@ $('#addSearch').on('click', function(){
 
 $(document).on('click','#clear', function(){
   $('#gifs').empty();
-  $('#button-holder').empty();
 })
